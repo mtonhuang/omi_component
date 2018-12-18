@@ -1,0 +1,39 @@
+.silder__nav {
+  text-align: left;
+  list-style: none;
+  .list {
+    text-align: center;
+    line-height: 50px;
+    &:hover {
+      background: #FDFDFD;
+      border-right: 5px solid #409EFF;
+    }
+    li {
+      padding-right: 30px;
+    }
+  }
+  .selected {
+    text-align: center;
+    line-height: 50px;
+    background: #FDFDFD;
+    border-right: 5px solid #409EFF;
+    li {
+      padding-right: 30px;
+    }
+  }
+  p {
+    margin: 8px 0;
+    padding-right: 30px;
+    color: #ccc;
+    text-align: center;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+  }
+}
