@@ -19,25 +19,25 @@ define('demo', class extends WeElement {
   data = {
     nav : [
       {
-        label: '',
-        path: '',
-        tag: '',
+        label: '内容',
+        path: '路径',
+        tag: '名称',
         children: [
           //嵌套子路由
         ]
       },
       {
-        label: '',
-        path: '',
-        tag: '',
+        label: '内容',
+        path: '路径',
+        tag: '名称',
         children: [
           //嵌套子路由
         ]
       },
       {
-        label: '处罚系统',
-        path: '',
-        tag: '',
+        label: '内容',
+        path: '路径',
+        tag: '名称',
         children: [
           //嵌套子路由
         ]
