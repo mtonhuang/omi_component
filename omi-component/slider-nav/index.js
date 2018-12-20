@@ -18,9 +18,27 @@ define('slider-nav', class extends WeElement {
 
     install() {}
 
+    installed() {
+        // this.shrink.onclick = () => {
+        //     let state = true
+        //         this.icon.className = 'el-icon-arrow-up'
+        // }
+        let state = true
+        const that = this
+        this.shrink.addEventListener('click',()=> {
+            if(state) {
+                that.icon.className = 'el-icon-arrow-up'
+                state = false
+            }
+            else {
+                that.icon.className = 'el-icon-arrow-down'
+                state = true
+            }
+        })
+    }
+
     getRenderedNav(props) {
         let sliderNav = []
-        console.log(props.nav)
         for (let nav of props.nav) {
             if (!!!nav.children.length) {
                 sliderNav.push(
@@ -32,13 +50,18 @@ define('slider-nav', class extends WeElement {
             }
             else {
                 sliderNav.push(
-                    <p>{nav.label}</p>
+                    <p ref = { e => {this.shrink = e}}>
+                        {nav.label}
+                        <i class="el-icon-arrow-down"
+                           ref = { e => {this.icon = e}}>
+                        </i>
+                    </p>
                 )
                 for (let list of nav.children) {
                     sliderNav.push(
-                        <ul class={list.selected ? 'selected' : 'list'}>
+                        <li class={list.selected ? 'selected' : 'list'}>
                             <a href={'#' + list.path}><li>{list.label}</li></a>
-                        </ul>
+                        </li>
                     )
                 }
             }

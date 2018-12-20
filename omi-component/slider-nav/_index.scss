@@ -1,3 +1,5 @@
+@import "../../../omi-element-ui/style/icon.scss";
+
 .silder__nav {
   text-align: left;
   list-style: none;
@@ -26,6 +28,12 @@
     padding-right: 30px;
     color: #ccc;
     text-align: center;
+    position: relative;
+    .el-icon-arrow-down,.el-icon-arrow-up {
+      position: absolute;
+      top: 3px;
+      right: 28px;
+    }
     &::before {
       content: '';
       position: absolute;
