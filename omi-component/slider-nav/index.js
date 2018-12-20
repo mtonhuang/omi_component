@@ -19,10 +19,10 @@ define('slider-nav', class extends WeElement {
     install() {}
 
     installed() {
-        // this.shrink.onclick = () => {
-        //     let state = true
-        //         this.icon.className = 'el-icon-arrow-up'
-        // }
+//         this.shrink.onclick = () => {
+//             let state = true
+//                 this.icon.className = 'el-icon-arrow-up'
+//         }
         let state = true
         const that = this
         this.shrink.addEventListener('click',()=> {
